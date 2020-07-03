@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int get_rev_num(int val) {
+    int rev_number=0;
+    while(val) {
+        rev_number=rev_number*10+val % 10;
+        val /= 10;
+        }
+    return rev_number;
+    }
+    int main() {
+        
+    int val;
+    printf("sayi giriniz:");
+    scanf("%d",&val);
+    printf("%d sayisinin tersi = %d\n",val,get_rev_num(val));  
+    return 0;    
+    }
