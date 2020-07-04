@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+void print_ulam(int val) {
+    printf("%d için ulam serisi\n",val);
+    do {
+    printf("%d",val);
+    if(val % 2 ==0)
+    val /= 2;
+    else val = val*3+1;
+    } while(val>1);
+    printf("%d\n",val);
+    }    
+    int main() {   
+        
+        int x;
+        printf("bir tam sayi girin: ");
+        scanf("%d",&x);
+        print_ulam(x);
+        return 0;
+    }
