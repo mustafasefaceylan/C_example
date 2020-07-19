@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#define NTIMES 10000000
+
+
+int main()
+{
+  double x,y;
+  int k;
+  int inside_counter=0;
+  srand(time(0));
+  for(k=0; k<NTIMES; ++k) {
+      x=(double) rand() / RAND_MAX;
+      y=(double) rand() / RAND_MAX;
+      if(x*x+y*y<=1)
+      inside_counter++;
+  }
+  printf("hesaplanan pi degeri = %lf\n",4. * inside_counter / NTIMES);
+  return 0;
+}
